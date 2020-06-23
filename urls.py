@@ -1,9 +1,9 @@
 import sys
-import urllib.request
+import requests
 
 urls = sys.argv[1]
 urls = urls.split(',')
 
 for url in urls:
-    html_ = urllib.request.Request(url)
+    html_ = requests.get(url)
     print(html_.text)
